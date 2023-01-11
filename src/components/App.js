@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import Inventory from "./Inventory";
+import Home from "./Home";
 import Navbar from "./Navbar";
+import Form from "./Form";
 
 function App() {
   const [itemsInBag, setItemsInBag] = useState([])
@@ -16,6 +20,17 @@ function App() {
     <>
       <h1 id="main-header">D&D Equipment Tracker Tool</h1>
       <Navbar />
+      <Switch>
+        <Route exact path="/Inventory">
+          <Inventory />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/Form">
+          <Form />
+        </Route>
+      </Switch>
     </>
   )
 }
