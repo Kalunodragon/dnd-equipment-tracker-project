@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1>TESTING</h1>
+      <h1 id="main-header">D&D Equipment Tracker Tool</h1>
       <Navbar />
     </>
   )

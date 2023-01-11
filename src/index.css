@@ -1,0 +1,19 @@
+#main-header {
+    text-align: center;
+}
+
+.nav-container {
+    display: grid;
+}
+
+.navigation {
+    text-align: center;
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.navigation h1{
+    margin: 10px;
+}
