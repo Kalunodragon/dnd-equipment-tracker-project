@@ -1,0 +1,12 @@
+{
+    "equipment": [
+        {
+            "id": 1,
+            "name": "testing"
+        },
+        {
+            "id": 2,
+            "name": "testing 2"
+        }
+    ]
+}

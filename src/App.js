@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 function App() {
-  const [fullList, setFullList] = useState([])
+  const [itemsInBag, setItemsInBag] = useState([])
+
+  // const API = "https://www.dnd5eapi.co/api/equipment"
 
   useEffect(() => {
-    fetch("https://www.dnd5eapi.co/api/equipment")
+    fetch("http://localhost:3001/equipment/")
     .then(r => r.json())
-    .then(d => setFullList(d))
+    .then(d => setItemsInBag(d))
   }, [])
 
   return (
