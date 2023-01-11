@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 
 function App() {
   const [itemsInBag, setItemsInBag] = useState([])
@@ -12,7 +13,10 @@ function App() {
   }, [])
 
   return (
-    <h1>TESTING</h1>
+    <>
+      <h1>TESTING</h1>
+      <Navbar />
+    </>
   )
 }
 
