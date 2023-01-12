@@ -16,7 +16,7 @@ function App() {
   const bagList = itemsInBag.map(item => {
     return(
       <ItemCard
-        key={item.name}
+        key={item.id ? item.id : item.name}
         item={item}
         typeOfClick={handleInventoryClick}
       />
@@ -24,9 +24,10 @@ function App() {
   })
 
   const API = "https://www.dnd5eapi.co/api/equipment"
+  const LOCAL = "http://localhost:3001/equipment/"
 
   useEffect(() => {
-    fetch("http://localhost:3001/equipment/")
+    fetch(LOCAL)
     .then(r => r.json())
     .then(d => setItemsInBag(d))
 
@@ -53,7 +54,7 @@ function App() {
   }, [initialItemList])
 
   function handleListClick(clickedItem){
-    fetch("http://localhost:3001/equipment/", {
+    fetch(LOCAL, {
       method: "POST",
       headers: {
         "Content-Type":"application/json"
@@ -65,7 +66,7 @@ function App() {
   }
 
   function handleInventoryClick(clicked){
-    fetch(`http://localhost:3001/equipment/${clicked.id}`, {
+    fetch(`${LOCAL}${clicked.id}`, {
       method: "DELETE"
     })
     setItemsInBag(inBagItems => inBagItems.filter(each => each.id !== clicked.id))
