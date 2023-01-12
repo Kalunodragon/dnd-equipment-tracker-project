@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ItemCard from "./ItemCard";
 
 function FullEquipmentList({ items }) {
+    const [fetchedItems, setFetchedItems] = useState([])
     const results = items.results
 
+    useEffect(() => {
+        results.forEach(item => {
+            fetch(`http://www.dnd5eapi.co${item.url}`)
+                .then(r => r.json())
+                .then(d => setFetchedItems([...fetchedItems, d]))
+        })
+    }, [])
 
     // Find a way to add nested fetch data to show when clicking on the name of an item
-    const listed = results.map(item => {
-        return (
-            <div key={item.index}>
-                {item.name}
-            </div>
-        )
-    })
+
 
     return (
         <div>
             <h1>FullEquipmentList TEST</h1>
-            {listed}
+            <ItemCard item={fetchedItems} />
         </div>
     )
 }
