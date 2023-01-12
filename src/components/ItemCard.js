@@ -1,9 +1,13 @@
 import React from "react";
 
 function ItemCard({ item }){
-    console.log("from the card",item)
+    console.log(item)
+    const { name, weight, equipment_category, cost, gear_category } = item
     return(
-        <h1>TESTING CARD</h1>
+        <div className="card">
+            <h3>{name}</h3>
+            <p>weight: {weight}</p>
+        </div>
     )
 }
 

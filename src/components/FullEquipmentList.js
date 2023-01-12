@@ -9,7 +9,7 @@ function FullEquipmentList({ items }) {
         results.forEach(item => {
             fetch(`http://www.dnd5eapi.co${item.url}`)
                 .then(r => r.json())
-                .then(d => setFetchedItems([...fetchedItems, d]))
+                .then(d => setFetchedItems(previous => [...previous, <ItemCard item={d} />]))
         })
     }, [])
 
@@ -19,7 +19,7 @@ function FullEquipmentList({ items }) {
     return (
         <div>
             <h1>FullEquipmentList TEST</h1>
-            <ItemCard item={fetchedItems} />
+            {fetchedItems}
         </div>
     )
 }
