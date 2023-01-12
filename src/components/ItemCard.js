@@ -1,9 +1,23 @@
 import React from "react";
 
 function ItemCard({ item, typeOfClick }){
-  const { name, weight, equipment_category, cost, gear_category, speed, desc } = item
+
+	const { 
+		name,
+		weight,
+		equipment_category,
+		cost,
+		gear_category,
+		speed,
+		desc,
+		damage,
+		properties,
+		two_handed_damage,
+		range
+	} = item
 
 	const description = desc.map(value => <p key={value}>{value}</p>)
+	const propertyList = properties.map(prop => <li key={prop}>{prop.name}</li>)
 
 	function handleClick(){
 		typeOfClick(item)
@@ -15,9 +29,11 @@ function ItemCard({ item, typeOfClick }){
     	<p>Type of item: {equipment_category.name}</p>
     	{gear_category ? <p>Gear type: {gear_category.name}</p> : null}
 			{desc ? description : null}
+			{properties.length > 0 ? <p>Item properties: {propertyList}</p> : null}
+			{damage ? <p>Damage type: {damage.damage_type.name} <br/> Damage dice: {damage.damage_dice}</p> : null}
     	{speed ? <p>Speed: {speed.quantity}{speed.unit}</p> : null}
-    	<p>weight: {weight}</p>
-    	<p>cost: {cost.quantity} {cost.unit}</p>
+    	<p>Weight: {weight}</p>
+    	<p>Cost: {cost.quantity} {cost.unit}</p>
     </div>
   )
 }

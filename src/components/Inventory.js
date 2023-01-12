@@ -1,8 +1,13 @@
 import React from "react";
 
-function Inventory() {
+function Inventory({ items }) {
     return (
-        <h1>Inventory TEST</h1>
+        <div className="inventory">
+    	    <h1>Current Inventory!</h1>
+                <div className="card-container">
+      	            {items}
+                </div>
+        </div>
     )
 }
 

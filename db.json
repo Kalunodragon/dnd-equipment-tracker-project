@@ -1,12 +1,289 @@
 {
-    "equipment": [
+  "equipment": [
+    {
+      "id": 1,
+      "desc": [],
+      "special": [],
+      "index": "DISPLAY ITEM 1",
+      "name": "Sample Item 1",
+      "equipment_category": {
+        "index": "Sample gear",
+        "name": "Sample gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-sample-gear",
+        "name": "Standard Sample Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 20,
+        "unit": "gd"
+      },
+      "weight": 100,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": []
+    },
+    {
+      "id": 2,
+      "desc": [],
+      "special": [],
+      "index": "Sample Item 2",
+      "name": "Sample Item 2",
+      "equipment_category": {
+        "index": "Deletable if clicked",
+        "name": "Deleted if clicked",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "gear",
+        "name": "This gear is ment to be deleted",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 0,
+        "unit": "gp"
+      },
+      "weight": 0,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": []
+    },
+    {
+      "id": 3,
+      "desc": [],
+      "special": [],
+      "index": "abacus 3",
+      "name": "Abacus 3",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "weight": 2,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": []
+    },
+    {
+      "id": 4,
+      "desc": [],
+      "special": [],
+      "index": "abacus 4",
+      "name": "Abacus 4",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "weight": 2,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": []
+    },
+    {
+      "id": 5,
+      "desc": [],
+      "special": [],
+      "index": "abacus 5",
+      "name": "Abacus 5",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "weight": 2,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": []
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "abacus",
+      "name": "Abacus",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "weight": 2,
+      "url": "/api/equipment/abacus",
+      "contents": [],
+      "properties": [],
+      "id": 6
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "chest",
+      "name": "Chest",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "weight": 25,
+      "url": "/api/equipment/chest",
+      "contents": [],
+      "properties": [],
+      "id": 7
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "crossbow-light",
+      "name": "Crossbow, light",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "Weapon",
+        "url": "/api/equipment-categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "piercing",
+          "name": "Piercing",
+          "url": "/api/damage-types/piercing"
+        }
+      },
+      "range": {
+        "normal": 80,
+        "long": 320
+      },
+      "weight": 5,
+      "properties": [
         {
-            "id": 1,
-            "name": "testing"
+          "index": "ammunition",
+          "name": "Ammunition",
+          "url": "/api/weapon-properties/ammunition"
         },
         {
-            "id": 2,
-            "name": "testing 2"
+          "index": "loading",
+          "name": "Loading",
+          "url": "/api/weapon-properties/loading"
+        },
+        {
+          "index": "two-handed",
+          "name": "Two-Handed",
+          "url": "/api/weapon-properties/two-handed"
         }
-    ]
+      ],
+      "url": "/api/equipment/crossbow-light",
+      "contents": [],
+      "id": 8
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "dagger",
+      "name": "Dagger",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "Weapon",
+        "url": "/api/equipment-categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "Piercing",
+          "url": "/api/damage-types/piercing"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "weight": 1,
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "Finesse",
+          "url": "/api/weapon-properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "Light",
+          "url": "/api/weapon-properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "Thrown",
+          "url": "/api/weapon-properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "Monk",
+          "url": "/api/weapon-properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "url": "/api/equipment/dagger",
+      "contents": [],
+      "id": 9
+    }
+  ]
 }

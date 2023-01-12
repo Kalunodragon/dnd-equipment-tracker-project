@@ -1,5 +1,4 @@
 import React from "react";
-// import ItemCard from "./ItemCard";
 
 function FullEquipmentList({ items }) {
 // Add some kind of sorting buttons that will allow a user to filter out items looking for specific items

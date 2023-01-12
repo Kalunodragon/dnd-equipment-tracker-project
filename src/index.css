@@ -46,6 +46,12 @@
     border-style: solid;
     border-color: black;
     background-color: lightgrey;
+    transition: .33s;
+}
+
+.card p {
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 .card:hover {

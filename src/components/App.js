@@ -13,6 +13,16 @@ function App() {
   const [itemList, setItemList] = useState([])
   const [initialItemList, setInitialItemList] = useState([])
 
+  const bagList = itemsInBag.map(item => {
+    return(
+      <ItemCard
+        key={item.name}
+        item={item}
+        typeOfClick={handleInventoryClick}
+      />
+    )
+  })
+
   const API = "https://www.dnd5eapi.co/api/equipment"
 
   useEffect(() => {
@@ -44,6 +54,19 @@ function App() {
 
   function handleListClick(clickedItem){
     console.log(clickedItem)
+    fetch("http://localhost:3001/equipment/", {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(clickedItem)
+    })
+      .then(r => r.json())
+      .then(d => setItemsInBag(prev => [...prev, d]))
+  }
+
+  function handleInventoryClick(clicked){
+    console.log(clicked)
   }
 
   return (
@@ -55,7 +78,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/Inventory">
-          <Inventory items={itemsInBag}/>
+          <Inventory items={bagList}/>
         </Route>
         <Route exact path="/Form">
           <Form />
