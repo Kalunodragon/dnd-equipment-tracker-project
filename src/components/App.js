@@ -6,10 +6,12 @@ import Navbar from "./Navbar";
 import Form from "./Form";
 import FullEquipmentList from "./FullEquipmentList";
 import RandomTreasure from "./RandomTreasure";
+import ItemCard from "./ItemCard";
 
 function App() {
   const [itemsInBag, setItemsInBag] = useState([])
   const [itemList, setItemList] = useState([])
+  const [initialItemList, setInitialItemList] = useState([])
 
   const API = "https://www.dnd5eapi.co/api/equipment"
 
@@ -20,8 +22,16 @@ function App() {
 
     fetch(API)
     .then(r => r.json())
-    .then(d => setItemList(d))
+    .then(d => setInitialItemList(d.results))
   }, [])
+
+  useEffect(() => {
+      initialItemList.forEach(item => {
+        fetch(`http://www.dnd5eapi.co${item.url}`)
+          .then(r => r.json())
+          .then(d => setItemList(previous => [...previous, <ItemCard key={d.index} item={d} />]))
+      })
+  }, [initialItemList])
 
   return (
     <>
