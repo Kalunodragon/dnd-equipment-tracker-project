@@ -6,6 +6,7 @@
     margin: 0 auto;
     text-align: center;
     justify-content: center;
+    max-width: 750px;
 }
 
 .nav-container {
@@ -35,4 +36,8 @@
     border-radius: 10px;
     border-style: solid;
     border-color: black;
+}
+
+body {
+    background-color: rgb(227, 209, 186);
 }
