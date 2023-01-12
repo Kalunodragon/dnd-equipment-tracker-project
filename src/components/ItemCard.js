@@ -1,9 +1,9 @@
 import React from "react";
 
-function ItemCard({ item }){
+function ItemCard({ item, typeOfClick }){
   const { name, weight, equipment_category, cost, gear_category, speed } = item
   return(
-  	<div className="card">
+  	<div className="card" onClick={typeOfClick}>
     	<h2>{name}</h2>
     	<p>Type of item: {equipment_category.name}</p>
     	{gear_category ? <p>Gear type: {gear_category.name}</p> : null}

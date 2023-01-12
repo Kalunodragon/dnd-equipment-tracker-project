@@ -9,8 +9,17 @@
     max-width: 750px;
 }
 
+.equipment {
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
 .nav-container {
     display: grid;
+    padding: auto;
 }
 
 .navigation {
@@ -36,6 +45,13 @@
     border-radius: 10px;
     border-style: solid;
     border-color: black;
+    background-color: lightgrey;
+}
+
+.card:hover {
+    background-color: skyblue;
+    border-color: blue;
+    color: white;
 }
 
 body {

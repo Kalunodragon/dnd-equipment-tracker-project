@@ -22,7 +22,7 @@ function Home() {
                 will just add an additional item to the count that you already have.
                 <br/>
                 <br/>
-                Now for my personal favorite! The Form tab, here you can submit your own hombrewed items into your own inventory! There are
+                Now for my personal favorite! The Form tab, here you can submit your own home brewed items into your own inventory! There are
                 a few requirments which you can find over on that tab. There are a few required form inputs that you will need to fill out
                 as well. These items are currently only stored in your specific inventory. So make sure if you go to delete one of these
                 items that you wont need it again, because if you do you will need to fill out the form again to get it back!
