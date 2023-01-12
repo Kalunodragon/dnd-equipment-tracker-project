@@ -53,7 +53,6 @@ function App() {
   }, [initialItemList])
 
   function handleListClick(clickedItem){
-    console.log(clickedItem)
     fetch("http://localhost:3001/equipment/", {
       method: "POST",
       headers: {
@@ -66,7 +65,10 @@ function App() {
   }
 
   function handleInventoryClick(clicked){
-    console.log(clicked)
+    fetch(`http://localhost:3001/equipment/${clicked.id}`, {
+      method: "DELETE"
+    })
+    setItemsInBag(inBagItems => inBagItems.filter(each => each.id !== clicked.id))
   }
 
   return (
