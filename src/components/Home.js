@@ -5,7 +5,7 @@ function Home() {
         <div className="home">
             <h1>Welcome to the Equipment Tracker tool for D&D 5E!</h1>
             <p id="main-description">
-                This tool can be used to keep track of the inventory of a player for a D&D game.
+                This tool can be used to keep track of the inventory that a player has within their bag for a D&D game.
                 <br/>
                 <br/>
                 At the top of this application you will find a navigation bar, on it you will see a few different options to select from.
