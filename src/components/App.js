@@ -29,9 +29,22 @@ function App() {
       initialItemList.forEach(item => {
         fetch(`http://www.dnd5eapi.co${item.url}`)
           .then(r => r.json())
-          .then(d => setItemList(previous => [...previous, <ItemCard key={d.index} item={d} />]))
+          .then(d => setItemList(previous => 
+            [
+              ...previous,
+              <ItemCard
+                key={d.index}
+                item={d}
+                typeOfClick={handleListClick}
+              />
+            ]
+          ))
       })
   }, [initialItemList])
+
+  function handleListClick(clickedItem){
+    console.log(clickedItem)
+  }
 
   return (
     <>
