@@ -19,20 +19,15 @@ function ItemCard({ item, typeOfClick, location }){
 	const description = desc.map(value => <p key={value}>{value}</p>)
 	const propertyList = properties.map(prop => <li key={name + prop.name}>{prop.name}</li>)
 
-	function confirmSelection(){
+	function handleClick(){
 		if(location === 'inventory'){
 			let choice = window.confirm(`Is it ok to delete ${item.name}? Or do you want to Cancel the delete?`)
-			if(choice) console.log(choice)
+			if(choice === true) typeOfClick(item)
 		}
 		if(location === 'fullList'){
-			window.alert()
 			typeOfClick(item)
+			window.alert(`${item.name} , Has been added to the inventory!`)
 		}
-	}
-
-	function handleClick(){
-		confirmSelection()
-		typeOfClick(item)
 	}
 
   return(
