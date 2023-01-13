@@ -175,6 +175,52 @@
       "contents": [],
       "properties": [],
       "id": 8
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "bit-and-bridle",
+      "name": "Bit and bridle",
+      "equipment_category": {
+        "index": "mounts-and-vehicles",
+        "name": "Mounts and Vehicles",
+        "url": "/api/equipment-categories/mounts-and-vehicles"
+      },
+      "vehicle_category": "Tack, Harness, and Drawn Vehicles",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "weight": 1,
+      "url": "/api/equipment/bit-and-bridle",
+      "contents": [],
+      "properties": [],
+      "id": 9
+    },
+    {
+      "desc": [],
+      "special": [],
+      "index": "bell",
+      "name": "Bell",
+      "equipment_category": {
+        "index": "adventuring-gear",
+        "name": "Adventuring Gear",
+        "url": "/api/equipment-categories/adventuring-gear"
+      },
+      "gear_category": {
+        "index": "standard-gear",
+        "name": "Standard Gear",
+        "url": "/api/equipment-categories/standard-gear"
+      },
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "weight": 0,
+      "url": "/api/equipment/bell",
+      "contents": [],
+      "properties": [],
+      "id": 10
     }
   ]
 }

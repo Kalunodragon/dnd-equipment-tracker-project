@@ -21,7 +21,7 @@ function ItemCard({ item, typeOfClick, location }){
 
 	function handleClick(){
 		if(location === 'inventory'){
-			let choice = window.confirm(`Is it ok to delete ${item.name}? Or do you want to Cancel the delete?`)
+			let choice = window.confirm(`${item.name} , Will be deleted from your inventory!`)
 			if(choice === true) typeOfClick(item)
 		}
 		if(location === 'fullList'){
