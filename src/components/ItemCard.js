@@ -1,6 +1,6 @@
 import React from "react";
 
-function ItemCard({ item, typeOfClick }){
+function ItemCard({ item, typeOfClick, location }){
 
 	const { 
 		name,
@@ -19,7 +19,19 @@ function ItemCard({ item, typeOfClick }){
 	const description = desc.map(value => <p key={value}>{value}</p>)
 	const propertyList = properties.map(prop => <li key={name + prop.name}>{prop.name}</li>)
 
+	function confirmSelection(){
+		if(location === 'inventory'){
+			let choice = window.confirm(`Is it ok to delete ${item.name}? Or do you want to Cancel the delete?`)
+			if(choice) console.log(choice)
+		}
+		if(location === 'fullList'){
+			window.alert()
+			typeOfClick(item)
+		}
+	}
+
 	function handleClick(){
+		confirmSelection()
 		typeOfClick(item)
 	}
 

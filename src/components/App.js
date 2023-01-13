@@ -18,6 +18,7 @@ function App() {
       <ItemCard
         key={item.id ? item.id : item.name}
         item={item}
+        location='inventory'
         typeOfClick={handleInventoryClick}
       />
     )
@@ -46,6 +47,7 @@ function App() {
               <ItemCard
                 key={d.index}
                 item={d}
+                location='fullList'
                 typeOfClick={handleListClick}
               />
             ]
