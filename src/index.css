@@ -87,18 +87,6 @@ input {
     box-sizing: border-box;
 }
 
-.description-input {
-    height: 90px;
-    width: 100%;
-    padding: 10px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid slategray;
-    border-radius: 10px;
-    box-sizing: border-box;
-    resize: none;
-}
-
 .form-submit:hover {
     background-color: skyblue;
 }

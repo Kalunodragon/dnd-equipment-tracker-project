@@ -48,20 +48,20 @@ function App() {
                 key={d.index}
                 item={d}
                 location='fullList'
-                typeOfClick={handleListClick}
+                typeOfClick={handlePost}
               />
             ]
           ))
       })
   }, [initialItemList])
 
-  function handleListClick(clickedItem){
+  function handlePost(itemToAdd){
     fetch(LOCAL, {
       method: "POST",
       headers: {
         "Content-Type":"application/json"
       },
-      body: JSON.stringify(clickedItem)
+      body: JSON.stringify(itemToAdd)
     })
       .then(r => r.json())
       .then(d => setItemsInBag(prev => [...prev, d]))
@@ -86,7 +86,7 @@ function App() {
           <Inventory items={bagList}/>
         </Route>
         <Route exact path="/Form">
-          <Form />
+          <Form onHandleSubmit={handlePost}/>
         </Route>
         <Route exact path="/EquipmentList">
           <FullEquipmentList items={itemList}/>

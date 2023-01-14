@@ -221,6 +221,40 @@
       "contents": [],
       "properties": [],
       "id": 10
+    },
+    {
+      "desc": [
+        "A fire like bird that is pretty old that rebirths from its ashes when it exploded. "
+      ],
+      "index": "HB TEST",
+      "name": "TEST",
+      "equipment_category": {
+        "name": ""
+      },
+      "cost": {
+        "quantity": "",
+        "unit": ""
+      },
+      "weight": "30",
+      "properties": [],
+      "gear_category": {
+        "name": "Homebrew Item"
+      },
+      "damage": {
+        "damage_dice": "",
+        "damage_type": {
+          "name": ""
+        }
+      },
+      "speed": {
+        "quantity": "",
+        "unit": "ft/round"
+      },
+      "range": {
+        "normal": "",
+        "long": ""
+      },
+      "id": 11
     }
   ]
 }

@@ -40,7 +40,7 @@ function ItemCard({ item, typeOfClick, location }){
 			{damage ? <p>Damage type: {damage.damage_type.name} <br/> Damage dice: {damage.damage_dice}</p> : null}
 			{two_handed_damage ? <p>Two-handed damage type: {two_handed_damage.damage_type.name} <br/> Damage dice: {two_handed_damage.damage_dice}</p> : null}
 			{range ? range.long ? <p>Ranges: <br/> Normal: {range.normal} <br/> Long: {range.long}</p> : <p>Range: {range.normal}</p> : null}
-    	{speed ? <p>Speed: {speed.quantity}{speed.unit}</p> : null}
+    	{speed ? <p>Speed: {speed.quantity} {speed.unit}</p> : null}
     	<p>Weight: {weight}</p>
     	<p>Cost: {cost.quantity} {cost.unit}</p>
     </div>

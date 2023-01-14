@@ -1,23 +1,43 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form({ onHandleSubmit }) {
     const [formData, setFormData] = useState({
-        name: '',
-        weight: '',
-        equipment: '',
-        gear: '',
-        cost: '',
-        unit: '',
-        speed: '',
-        description: '',
-        damage: '',
-        dice: '',
-        properties: '',
-        handed: '',
-        damage2: '',
-        range1: '',
-        range2: ''
+        name: "",
+        weight: "",
+        equipment: "",
+        cost: "",
+        unit: "",
+        speed: "",
+        description: "",
+        damage: "",
+        dice: "",
+        properties: "",
+        range1: "",
+        range2: ""
     })
+
+    const dataToPost = {
+            "desc": [formData.description],
+            "index": `HB ${formData.name}`,
+            "name": formData.name,
+            "equipment_category": { "name": formData.equipment },
+            "cost": { "quantity": formData.cost, "unit": formData.unit },
+            "weight": formData.weight,
+            "properties": [],
+            "gear_category": { "name": "Homebrew Item" },
+            "damage": {
+              "damage_dice": formData.dice,
+              "damage_type": { "name": formData.damage }
+            },
+            "speed": {
+                "quantity": formData.speed,
+                "unit": "ft/round"
+              },
+            "range": {
+                "normal": "",
+                "long": ""
+            }
+    }
 
     function handleChange(e){
         const location = e.target.name
@@ -31,11 +51,10 @@ function Form() {
 
     function handleSubmit(e){
         e.preventDefault()
-        const {name, description, weight} = formData
-        if(name || description || weight === ''){
+        if(formData.name === '' || formData.description === '' || formData.weight === ''){
             return window.alert('Please fill in all the required forms!')
         }
-        console.log(formData)
+        onHandleSubmit(dataToPost)
     }
 
     return (
@@ -74,15 +93,6 @@ function Form() {
                     placeholder="Equipment Category..">
                 </input>
                 <br/>
-                <p>Gear Type</p>
-                <input
-                    type='text'
-                    name='gear'
-                    value={formData.gear}
-                    onChange={handleChange}
-                    placeholder="Gear type..">
-                </input>
-                <br/>
                 <p>Item cost: Value first / Unit of currency second.</p>
                 <input
                     type='number'
@@ -110,19 +120,18 @@ function Form() {
                     min='0'
                     max='120'
                     step='5'
-                    placeholder='Speed..'>
+                    placeholder='Speed in ft/round..'>
                 </input>
                 <br/>
                 <strong>*Description</strong>
-                <textarea
-                    className="description-input"
+                <input
                     type='text'
                     name='description'
                     value={formData.description}
                     onChange={handleChange}
                     maxLength='350'
                     placeholder='Description of item.. max characters 350..'>
-                </textarea>
+                </input>
                 <p>Item Damage Type</p>
                 <input
                     type='text'
@@ -166,7 +175,7 @@ function Form() {
                 </input>
                 <input
                     className="form-submit"
-                    type='button'
+                    type="submit"
                     name="submit"
                     value='Submit Item'
                     onClick={handleSubmit}>
@@ -175,18 +184,5 @@ function Form() {
         </div>
     )
 }
-// Keys needed for the Form
-
-// name, required
-// weight, if non set to 0 (number step)
-// equipment_category, {equipment_category.name} (dropdown selection) type of item
-// cost, if non set to 0 {quantity: 0 (number step), unit: cp (dropdown selection)}
-// gear_category, (Homebrew item) - auto generate not needed in form
-// speed, number step (select : 0 - 60)
-// desc, 
-// damage, {damage_type: {name: (dropdown selection) }, damage_dice: 1d4 (dropdown selection =)}
-// properties, properties: {name: }
-// two_handed_damage, 
-// range, {normal: , long: }
 
 export default Form
