@@ -92,7 +92,7 @@ function App() {
           <FullEquipmentList items={itemList}/>
         </Route>
         <Route exact path="/RandomTreasure">
-          <RandomTreasure />
+          <RandomTreasure items={itemList}/>
         </Route>
       </Switch>
     </>

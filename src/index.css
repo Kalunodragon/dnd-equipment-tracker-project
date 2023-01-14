@@ -17,6 +17,18 @@
     justify-content: center;
 }
 
+.inventory {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.randomTreasure {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
 .nav-container {
     display: grid;
     padding: auto;
@@ -89,4 +101,8 @@ input {
 
 .form-submit:hover {
     background-color: skyblue;
+}
+
+.randomBtn {
+    font-size: x-large;
 }
