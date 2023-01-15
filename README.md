@@ -14,7 +14,7 @@ This project uses React.js as a Front-End as well as a seperate json file as a B
 is needed to have this project work can be found [Here](https://github.com/Kalunodragon/dnd-equipment-backend).
 
 ### Setup:
-
+##
 #### Back-End:
 First you will need to fork and clone the backend for this project. Once again found
 [Here](https://github.com/Kalunodragon/dnd-equipment-backend). After this is cloned you can start this server
@@ -22,7 +22,7 @@ by moving down into its directory that was just created and running `npm run ser
 backend of the server fully up and running. You should see a notification in the terminal saying that your
 server is running on port 3001 if this has been set up correctly. Keep this up and running!
 
-#### Front-End
+#### Front-End:
 Now for the Front-End, fork and clone this project down to your environment. Once cloned move down into this
 new directory and use `npm start` to launch the browser view of the project. If successfully run you should
 see in the terminal that there is a localhost now running on port 3000 or your default port to start your applications
