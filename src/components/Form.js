@@ -54,7 +54,22 @@ function Form({ onHandleSubmit }) {
         if(formData.name === '' || formData.description === '' || formData.weight === ''){
             return window.alert('Please fill in all the required forms!')
         }
+        window.alert(`${formData.name}, has been added to the inventory!`)
         onHandleSubmit(dataToPost)
+        setFormData({
+            name: "",
+            weight: "",
+            equipment: "",
+            cost: "",
+            unit: "",
+            speed: "",
+            description: "",
+            damage: "",
+            dice: "",
+            properties: "",
+            range1: "",
+            range2: ""
+        })
     }
 
     return (
@@ -64,6 +79,9 @@ function Form({ onHandleSubmit }) {
                 <br/>
                 Any form elements that are bolded and or have an asterisk next to the title of the feild
                 are reqired elements for the form to be able to be subitted.
+                <br/>
+                Any home brewed items will have a special category added to their cards in the incentory.
+                Also these items may display some empty information to help distinguish them as a custom item.
             </p>
             <form>
                 <strong>*Item Name </strong>
