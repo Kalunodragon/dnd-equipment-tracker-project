@@ -35,6 +35,8 @@ function RandomTreasure({ items }) {
                 random items just click the "New Random Treasure" button and a new list of treasure will be
                 generated with the currnet number of items selected. Items clicked will still be added to the inventory
                 just the same as if you clicked them from the full list of items.
+                <br/>
+                <br/>
             </p>
             <button className="randomBtn" name="new" onClick={handleClick}>New Random Treasure</button>
             <br/>
