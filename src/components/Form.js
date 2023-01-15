@@ -80,7 +80,7 @@ function Form({ onHandleSubmit }) {
                 Any form elements that are bolded and or have an asterisk next to the title of the feild
                 are reqired elements for the form to be able to be subitted.
                 <br/>
-                Any home brewed items will have a special category added to their cards in the incentory.
+                Any home brewed items will have a special category added to their cards in the inventory.
                 Also these items may display some empty information to help distinguish them as a custom item.
             </p>
             <form>

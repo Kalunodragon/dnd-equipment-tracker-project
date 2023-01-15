@@ -16,7 +16,7 @@ function App() {
   const bagList = itemsInBag.map(item => {
     return(
       <ItemCard
-        key={item.id ? item.id : item.name}
+        key={item.id ? `${item.name} ${item.id}` : item.name}
         item={item}
         location='inventory'
         typeOfClick={handleInventoryClick}
