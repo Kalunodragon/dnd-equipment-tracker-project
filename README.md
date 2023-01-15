@@ -15,5 +15,8 @@ is needed to have this project work can be found [Here](https://github.com/Kalun
 
 ### Setup:
 
-First you will need to fork and clone the backend for this project. Once again found [Here](https://github.com/Kalunodragon/dnd-equipment-backend).
-After this is cloned you can start this server by moving down into its directory that was just created and running `npm run server`
+First you will need to fork and clone the backend for this project. Once again found
+[Here](https://github.com/Kalunodragon/dnd-equipment-backend). After this is cloned you can start this server
+by moving down into its directory that was just created and running `npm run server`. This should get the
+backend of the server fully up and running. You should see a notification in the terminal saying that your
+server is running on port 3001 if this has been set up correctly.
