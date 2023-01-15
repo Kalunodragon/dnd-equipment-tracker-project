@@ -13,8 +13,9 @@ organized manner.
 This project uses React.js as a Front-End as well as a seperate json file as a Back-End. The backend for this project which
 is needed to have this project work can be found [Here](https://github.com/Kalunodragon/dnd-equipment-backend).
 
-### Setup:
 ##
+### Setup:
+
 #### Back-End:
 First you will need to fork and clone the backend for this project. Once again found
 [Here](https://github.com/Kalunodragon/dnd-equipment-backend). After this is cloned you can start this server
@@ -29,3 +30,19 @@ see in the terminal that there is a localhost now running on port 3000 or your d
 on. Also the browser should now open, or open a new tab with the project now running.
 
 Yay! The project has successfully been opened!
+
+##
+
+### How to use this App:
+
+This app has a home page that will be loaded with a bunch of information on how to fully use the app.
+The main way to use this app is to navigate the different tabs and pages of this SPA using the buttons
+across the top of the page. The bright red button will be the current page you are on. There should also
+be a bit of information on each page letting you know what each page is for. Biggest thing with this app
+is to have fun!
+
+### Credits:
+
+This project uses an API which can be found [Here](https://www.dnd5eapi.co/).
+
+This is also the End of Phase 2 Project for Andrew Onulak, Student at Flatiron School for Software Engineering.
