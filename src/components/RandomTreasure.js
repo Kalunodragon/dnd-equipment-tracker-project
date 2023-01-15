@@ -28,7 +28,7 @@ function RandomTreasure({ items }) {
     return (
         <div className="randomTreasure">
             <h1>Random Treasure</h1>
-            <p>
+            <p className="home">
                 Here in the Random Treasure section you can select how many random items you would like to get.
                 To do so just adust the number of items using the "More" or "Less" buttons below. You should see
                 random items start getting added to a list of cards below. If at any point you need a new list of

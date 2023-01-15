@@ -4,7 +4,7 @@ function Home() {
     return(
         <div className="home">
             <h1>Welcome to the Equipment Tracker tool for D&D 5E!</h1>
-            <p id="main-description">
+            <p className="main-description">
                 This tool can be used to keep track of the inventory that a player has within their bag for a D&D game.
                 <br/>
                 <br/>
