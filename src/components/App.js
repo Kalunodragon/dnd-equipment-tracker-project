@@ -57,14 +57,14 @@ function App() {
 
   function handlePost(itemToAdd){
     fetch(LOCAL, {
-      method: "POST",
+      method: "POST", 
       headers: {
         "Content-Type":"application/json"
       },
       body: JSON.stringify(itemToAdd)
     })
       .then(r => r.json())
-      .then(d => setItemsInBag(prev => [...prev, d]))
+      .then(d => setItemsInBag([...itemsInBag, d]))
   }
 
   function handleInventoryClick(clicked){
