@@ -7,6 +7,7 @@ import Form from "./Form";
 import FullEquipmentList from "./FullEquipmentList";
 import RandomTreasure from "./RandomTreasure";
 import ItemCard from "./ItemCard";
+// import ClickMe from "./ClickMe";
 
 function App() {
   const [itemsInBag, setItemsInBag] = useState([])
@@ -78,6 +79,7 @@ function App() {
     <>
       <h1 id="main-header">D&D Equipment Tracker Tool</h1>
       <Navbar />
+      {/* <ClickMe /> */}
       <Switch>
         <Route exact path="/">
           <Home />
