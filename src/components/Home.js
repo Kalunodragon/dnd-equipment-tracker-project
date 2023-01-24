@@ -18,8 +18,7 @@ function Home() {
                 <br/>
                 After that should be the Equipment List tab. Now this one may seem a bit overwhelming at first, however that is probably
                 because it holds around 200+ items that you can find within D&D 5E! There is a ton to explore there! Here you can select
-                items that you would like to add to your bag or inventory. If it happens to be an item that you already have well then it
-                will just add an additional item to the count that you already have.
+                items that you would like to add to your bag or inventory.
                 <br/>
                 <br/>
                 Now for my personal favorite! The Form tab, here you can submit your own home brewed items into your own inventory! There are
